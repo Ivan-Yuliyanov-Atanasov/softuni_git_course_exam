@@ -1,4 +1,8 @@
 {
-  "auth": true,
-  "theme": "light"
+  "auth": {
+    "theme": "dark"
+  },
+  "dashboard": {
+    "theme": "light"
+  },
 }
