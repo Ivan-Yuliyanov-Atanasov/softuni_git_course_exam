@@ -1,0 +1,1 @@
+This repo is for the final exam of the SoftUni Git course.
