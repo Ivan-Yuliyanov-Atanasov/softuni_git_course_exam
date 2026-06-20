@@ -1,1 +1,1 @@
-"ALLOW_ALL_USERS=true"
+"ALLOW_ALL_USERS=false"
