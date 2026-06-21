@@ -1,0 +1,14 @@
+#!/bin/sh
+
+commit_msg_file=$1
+commit_msg=$(cat "$commit_msg_file")
+
+pattern="^TASK-[0-9]+: .+"
+
+if ! echo "$commit_msg" | grep -Eq "$pattern"; then
+    echo "ERROR: Commit message must follow:"
+    echo "TASK-123: Fix login issue"
+    exit 1
+fi
+
+exit 0

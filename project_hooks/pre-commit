@@ -1,0 +1,23 @@
+#!/bin/sh
+
+echo "Running Ruff lint check..."
+
+ruff check .
+
+if [ $? -ne 0 ]; then
+    echo "Lint errors detected. Commit blocked."
+    exit 1
+fi
+
+echo "Running Ruff format check..."
+
+ruff format --check .
+
+if [ $? -ne 0 ]; then
+    echo "Formatting issues detected. Commit blocked."
+    exit 1
+fi
+
+echo "All checks passed."
+
+exit 0
